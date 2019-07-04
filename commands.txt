@@ -1,0 +1,13 @@
+ sudo mysql_secure_installation
+ aws s3 cp s3://applicationrds1/1-users.sql .
+ aws s3 cp s3://applicationrds1/simpleapp.php .
+
+ sudo cp *.php /var/www/html/
+
+ import mysql dump to RDS instance
+ mysql --user=user1 --password=user12345 --database=test --host=dbinstance1.czuoehlol9jj.us-west-2.rds.amazonaws.com < 1-users.sql
+
+ Connect to RDS and check if data is present
+ mysql --user=user1 --password=user12345 --database=test --host=dbinstance1.czuoehlol9jj.us-west-2.rds.amazonaws.com
+ 
+

@@ -1,0 +1,8 @@
+apt-get update
+apt-get install apache2
+apt-get install mysql-server
+apt-get install php libapache2-mod-php
+apt-get install php-mysql
+service apache2 restart
+apt-get  install awscli
+
